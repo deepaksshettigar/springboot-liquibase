@@ -8,8 +8,10 @@ spring:
     username: postgres
     password: postgres
   liquibase:
+    enabled: false
     defaultSchema: liquibase
     changeLog: /db/log/changelog.yml
     parameters:
       textColumnType: TEXT
     contexts: nonprod
+
