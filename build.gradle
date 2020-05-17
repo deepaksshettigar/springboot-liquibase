@@ -44,3 +44,13 @@ dependencies {
 test {
 	useJUnitPlatform()
 }
+ext {
+	javaMainClass = 'com.org.company.DatagateApplication'
+}
+
+task datagate(type: JavaExec) {
+	group = "Execution"
+	description = "Run the main class with JavaExecTask"
+	classpath = sourceSets.main.runtimeClasspath
+	main = javaMainClass
+}
