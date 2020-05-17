@@ -1,0 +1,12 @@
+version: "3.0"
+services:
+  database:
+    image: library/postgres:latest
+    ports:
+      - 7475:5432
+    expose:
+      - 7475
+    environment:
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=datagate

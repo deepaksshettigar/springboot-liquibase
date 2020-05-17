@@ -1,0 +1,5 @@
+databaseChangeLog:
+  - include:
+      file: db/change/01-initial-load.sql
+  - include:
+      file: db/change/02-insert-region-A.sql

@@ -1,0 +1,15 @@
+spring:
+  profiles: default
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  datasource:
+    url: jdbc:postgresql://localhost:5432/datagate?current_schema=public
+    driverClassName: org.postgresql.Driver
+    username: postgres
+    password: postgres
+  liquibase:
+    defaultSchema: liquibase
+    changeLog: /db/log/changelog.yml
+    parameters:
+      textColumnType: TEXT
+    contexts: nonprod
